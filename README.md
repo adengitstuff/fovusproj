@@ -31,6 +31,12 @@ Step 2: Log into AWS Backend. Watch any services and monitor Cloudwatch, DynamoD
     IAM Username: Fovusteam
     Password: Fovus*123
 
-Step 3: You should be able to simply type in input and submit a file. 
+Step 3: You should be able to simply type in input and submit a file
+
+# References
+
+I used a number of references, some of which were videos! I've included them all in the e-mail sent.
+
+# Demo/Screenshots
 
 

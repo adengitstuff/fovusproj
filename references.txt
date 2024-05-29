@@ -1,0 +1,112 @@
+﻿References for Fovus Project:
+
+
+Signed urls:
+https://aws.amazon.com/blogs/compute/uploading-to-amazon-s3-directly-from-a-web-or-mobile-application/
+Quick syntax check:
+https://dev.to/aws-builders/create-your-first-s3-bucket-using-aws-cdk-cj7
+https://stackoverflow.com/questions/76667966/pkg-error-reading-from-file-in-amplify
+
+
+        (** flowbite)
+https://flowbite.com/docs/getting-started/introduction/
+https://flowbite.com/docs/getting-started/react/
+        https://www.npmjs.com/package/flowbite
+        https://flowbite-react.com/
+https://tailwindcss.com/docs/installation
+
+
+Aws best practices:
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html
+
+
+(** I’d never used pre-signed URL’s before, so this was just confirmation that this was a professional, production-app ready thing to do)
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/PresignedUrlUploadObject.html
+
+
+Cognito (* I ended up trying to submit faster and not use this, but in production I would use Cognito!)
+https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_cognito.UserPool.html
+https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html
+!! https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html
+Aws exact userpool:
+https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.CognitoUserPoolsAuthorizer.html
+Dynamo db:
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/CheatSheet.html
+
+
+Client-s3 (v3):
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/s3/command/PutObjectCommand/
+
+
+DynamoDB:
+For quick check to make sure my syntax was okay:
+https://dynobase.dev/dynamodb-aws-cdk/
+For general principles:
+https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_dynamodb.Table.html
+
+
+Put Item Command:
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-dynamodb/Class/PutItemCommand/
+
+
+                Choosing partition key:
+
+
+                https://aws.amazon.com/blogs/database/choosing-the-right-dynamodb-partition-key/
+Lambda environment variables:
+https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html
+Grant read-write:
+
+
+https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_s3.Bucket.html#grantwbrreadwbrwriteidentity-objectskeypattern
+
+
+Lambda quick syntax google/check:
+
+
+https://hevodata.com/learn/aws-cdk-lambda/
+AWS V3 example code/ official example docs:
+https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/s3/actions/put-object.js#L6
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/lambda/actions/create-function.js#L15
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/introduction/
+
+
+—
+Streams and lambda:
+https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html
+https://stackoverflow.com/questions/49728807/trim-horizon-vs-latest
+https://docs.aws.amazon.com/cdk/api/v2/python/aws_cdk.aws_lambda_event_sources/README.html
+
+
+–
+E3
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/RunInstancesCommand/
+
+
+Learned about instance profiles:
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
+
+
+–
+Notes/ behind-the-scenes best practices:
+
+
+Amplify configured with the right IAM user with the right permissions
+
+
+Amazon SSM:
+https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
+
+
+SSM & Lambda, EC2 videos:
+https://www.youtube.com/watch?v=F1-hvgZyw80
+https://www.youtube.com/watch?v=l2NeAs2gNOo
+https://www.youtube.com/watch?v=UlXGonbrwto
+https://www.youtube.com/watch?v=7vL9pazmcG0
+https://www.youtube.com/watch?v=O-p8yCEokcc (didn’t use any code)
+https://www.youtube.com/watch?v=esedbAYsDd0
+
+
+General querying:
+https://github.com/open-guides/og-aws
