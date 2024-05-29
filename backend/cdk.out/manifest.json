@@ -1,0 +1,251 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "FovusprojStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "FovusprojStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "FovusprojStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "FovusprojStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/5a6c8f4c09ef72aa0c6b413354f13c04e3af75d1301c3bd5f76877b7d4bdcdcb.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "FovusprojStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "FovusprojStack.assets"
+      ],
+      "metadata": {
+        "/FovusprojStack/fovusstorage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fovusstorage1F90A795"
+          }
+        ],
+        "/FovusprojStack/PresignUrlFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PresignUrlFunctionServiceRole4F302DB4"
+          }
+        ],
+        "/FovusprojStack/PresignUrlFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PresignUrlFunction66579E6E"
+          }
+        ],
+        "/FovusprojStack/LambdaS3DynamoPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaS3DynamoPolicy2A95C2C3"
+          }
+        ],
+        "/FovusprojStack/LambdaExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaExecutionRoleD5C26073"
+          }
+        ],
+        "/FovusprojStack/LambdaExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaExecutionRoleDefaultPolicy6D69732F"
+          }
+        ],
+        "/FovusprojStack/FileApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApi001A5654"
+          }
+        ],
+        "/FovusprojStack/FileApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiDeployment55C357467c9d2834aa130798493d3b918817103c"
+          }
+        ],
+        "/FovusprojStack/FileApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiDeploymentStageprod06EE725D"
+          }
+        ],
+        "/FovusprojStack/FileApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiEndpoint0B05AD47"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiOPTIONSC8CD9694"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/generate-presigned-url/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApigeneratepresignedurl64E664C8"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/generate-presigned-url/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApigeneratepresignedurlOPTIONS9576BC41"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/generate-presigned-url/GET/ApiPermission.FovusprojStackFileApi09D0CDCC.GET..generate-presigned-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApigeneratepresignedurlGETApiPermissionFovusprojStackFileApi09D0CDCCGETgeneratepresignedurlC2F38D2C"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/generate-presigned-url/GET/ApiPermission.Test.FovusprojStackFileApi09D0CDCC.GET..generate-presigned-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApigeneratepresignedurlGETApiPermissionTestFovusprojStackFileApi09D0CDCCGETgeneratepresignedurlB7221AE3"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/generate-presigned-url/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApigeneratepresignedurlGET35623739"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/add-table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiaddtableCAA0C08E"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/add-table/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiaddtableOPTIONS3E7F8749"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/add-table/POST/ApiPermission.FovusprojStackFileApi09D0CDCC.POST..add-table": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiaddtablePOSTApiPermissionFovusprojStackFileApi09D0CDCCPOSTaddtable5E9156B9"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/add-table/POST/ApiPermission.Test.FovusprojStackFileApi09D0CDCC.POST..add-table": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiaddtablePOSTApiPermissionTestFovusprojStackFileApi09D0CDCCPOSTaddtableA0FBFC4C"
+          }
+        ],
+        "/FovusprojStack/FileApi/Default/add-table/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileApiaddtablePOSTD7D4CA71"
+          }
+        ],
+        "/FovusprojStack/FovusTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FovusTable8F4FCE27"
+          }
+        ],
+        "/FovusprojStack/addToTableFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "addToTableFunctionServiceRole7FD9038B"
+          }
+        ],
+        "/FovusprojStack/addToTableFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "addToTableFunctionServiceRoleDefaultPolicyD25C0E0B"
+          }
+        ],
+        "/FovusprojStack/addToTableFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "addToTableFunctionC3A37227"
+          }
+        ],
+        "/FovusprojStack/addToTableFunction/DynamoDBEventSource:FovusprojStackFovusTable505986BA/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "addToTableFunctionDynamoDBEventSourceFovusprojStackFovusTable505986BA80937528"
+          }
+        ],
+        "/FovusprojStack/Ec2InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Ec2InstanceRole212C84F4"
+          }
+        ],
+        "/FovusprojStack/Ec2InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Ec2InstanceProfile"
+          }
+        ],
+        "/FovusprojStack/ec2CreationFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2CreationFunctionC72162C2"
+          }
+        ],
+        "/FovusprojStack/ec2CreationFunction/DynamoDBEventSource:FovusprojStackFovusTable505986BA/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2CreationFunctionDynamoDBEventSourceFovusprojStackFovusTable505986BA9E3C7D8C"
+          }
+        ],
+        "/FovusprojStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/FovusprojStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/FovusprojStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/FovusprojStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "FovusprojStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

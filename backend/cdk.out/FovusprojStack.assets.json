@@ -1,0 +1,32 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "f520e2f5854d055db5152b007ce9a82e481cc2b525ec60c196463ece9baffcb3": {
+      "source": {
+        "path": "asset.f520e2f5854d055db5152b007ce9a82e481cc2b525ec60c196463ece9baffcb3",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "f520e2f5854d055db5152b007ce9a82e481cc2b525ec60c196463ece9baffcb3.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "5a6c8f4c09ef72aa0c6b413354f13c04e3af75d1301c3bd5f76877b7d4bdcdcb": {
+      "source": {
+        "path": "FovusprojStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "5a6c8f4c09ef72aa0c6b413354f13c04e3af75d1301c3bd5f76877b7d4bdcdcb.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
