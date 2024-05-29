@@ -124,7 +124,7 @@ const startEC2Instance = async () => {
     InstanceType: 't2.micro',
     MinCount: 1,
     MaxCount: 1,
-    IamInstanceProfile: { Name: 'ec2role' }, // Use the instance profile name here
+    IamInstanceProfile: { Name: 'ec2role' }, // ec2 role instead of inline policy
     TagSpecifications: [{
       ResourceType: 'instance',
       Tags: [{ Key: 'Name', 
@@ -142,6 +142,9 @@ const waitForInstanceInitialization = async (instanceId) => {
   const maxAttempts = 30;
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+  /** The instance starts running, but then can initialize for several minutes, sometimes 
+   * taking up to 3 or 4 to run through its tests. Call getInstanceStatus and just keep querying
+   */
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     const status = await getInstanceStatus(instanceId);
     if (status === 'ok') {
@@ -222,10 +225,12 @@ const runScriptInInstance = async (instanceId, id, inputText, inputFilePath) => 
   const commands = [
     `echo "${inputFileContent}" > /home/ec2-user/inputfile${originalExtension}`, // Save the file content
     `bash /home/ec2-user/inputfile${originalExtension}`, // Execute bash script
-    `echo "${outputFileContent}" > /home/ec2-user/outputfile.output` // append length
+     // I wasn't sure if the spec meant to name it .output! I did save as .output, in order to easily see the output file 
+    `echo "${outputFileContent}" > /home/ec2-user/outputfile.output` 
+    
   ];
 
-  /** Create ssm SendCommand */
+  /** Create and send ssm SendCommand */
   const ssmCommand = new SendCommandCommand({
     DocumentName: 'AWS-RunShellScript',
     InstanceIds: [instanceId],
@@ -267,15 +272,17 @@ const terminateEC2Instance = async (instanceId) => {
   await ec2Client.send(new TerminateInstancesCommand(params));
 };
 
-/** I believe in typescript there is a streamtostring method but
- * in V3 SDK there wasn't. Body from GetObject returns a readable stream
- * so manually turn it into string
+/** Body from GetObject returns a readable stream
+ * so manually turn it into string.
  */
 const streamToString = (stream) => {
   return new Promise((resolve, reject) => {
     const chunks = [];
+    // Event listener to listen to data events in stream. Pass into chunks array
     stream.on('data', (chunk) => chunks.push(chunk));
+    // Reject the promise if we see an error
     stream.on('error', reject);
+    // Call resolve when i reach the end and Buffer.concat to concatenate the chunks array
     stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')));
   });
 };
