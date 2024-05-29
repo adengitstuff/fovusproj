@@ -35,7 +35,7 @@ Step 3: You should be able to simply type in input and submit a file
 
 # References
 
-I used a number of references, some of which were videos! I've included them all in the e-mail sent.
+I used a number of references, some of which were videos! I've included them all in the references.txt file
 
 # Demo/Screenshots
 
