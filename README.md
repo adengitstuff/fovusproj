@@ -9,9 +9,6 @@ and a separate function is used to add data to a dynamoDB Table. Insertions into
 which parses data and runs the scripts with essential, minimum error handling. This was a really interesting project and I thank you guys
 for the opportunity to work on this! 
 
-# Deployment
-
-
 # Deployment!
 
 Steps to deploy and run code locally!
