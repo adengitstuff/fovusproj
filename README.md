@@ -16,8 +16,11 @@ Steps to deploy and run code locally!
 This will assume you already have the necessary tools installed:
 
 Node.js + npm: https://nodejs.org
+
 React: https://react.dev/learn/installation
+
 AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
 AWS CDK: https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html
 
 
