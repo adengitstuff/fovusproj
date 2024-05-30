@@ -119,8 +119,21 @@ Step 4: Deploy frontend
 you e-mail me, I can send over config and credentials if you'd like to test Amplify
 deploy!
 
+(Optional) Step 5: Monitor backend
 
+You can log into AWS to view the File Table, Ec2 instances, buckets, and anything else in the project's deployment 
+stack.
 
+Log into AWS Backend with: 
+
+    1. Go to aws.amazon.com and click "Sign In"
+    2. Click "IAM user" in order to sign in
+
+    It will ask for the following info:
+
+    Account ID: 654654352890
+    IAM Username: Fovusteam
+    Password: Fovus*123
 
 # Live Demo Steps
 
