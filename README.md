@@ -108,13 +108,12 @@ Step 4: Deploy frontend
 
 
  These instructions should deploy and run the app locally! If you wish to also
-	test deploy to Amplify, we would need to run:
+	test deploy to Amplify, we could install Amplify and run:
 
- 		amplify pull --appId d2pmm485td5mzr --envName dev
+amplify pull --appId d2pmm485td5mzr --envName dev
 
-  But it would be missing credentials and aws config file, so it wouldn't work. If
-you e-mail me, I can send over config and credentials if you'd like to test Amplify
-deploy!
+  But it would be missing credentials and aws config file. If you'd like to test
+  Amplify deploy, please e-mail me. I can send credentials over!
 
 (Optional) Step 5: Monitor backend
 
