@@ -14,7 +14,7 @@ const SignIn = ({ onSignIn }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-
+  const navigate = useNavigate(); // Initialize useNavigate
   const handleSubmit = (event) => {
     //console.log('in handle submit');
     event.preventDefault();
@@ -24,6 +24,9 @@ const SignIn = ({ onSignIn }) => {
         setError('Please enter both username and password.');
         return;
       }
+
+    alert('This sign-in component is front-end only for now! Navigate back to the main page.');
+    navigate('/');
     // const user = new CognitoUser({
     //   Username: username,
     //   Pool: userPool,

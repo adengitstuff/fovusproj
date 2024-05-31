@@ -153,6 +153,7 @@ export class FovusprojStack extends cdk.Stack {
     }
   );
 
+    /** Create an ec2 instance with event source as Dynamo DB! */
     const ec2CreationFunction = new lambda.Function(this, 'ec2CreationFunction', {
       runtime: lambda.Runtime.NODEJS_18_X,
       handler: 'ec2Handler.handler',
