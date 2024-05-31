@@ -142,7 +142,7 @@ Step 1: Go to Amplify endpoint:
 
 https://dev.d2pmm485td5mzr.amplifyapp.com/
 
-*(Note that there is a Sign-In component there as well. I plan to continue this project and integrate with Cognito and simply included it!)
+*(Note that there is a Sign-In component there as well. This is just the front-end component; I plan to continue this project and integrate with Cognito for experience with user pools, and included the front-end for now!)
 
 
 Step 2: Log into AWS Backend. Watch any services and monitor Cloudwatch, DynamoDB Table, S3, EC2, Lambdas, and more:

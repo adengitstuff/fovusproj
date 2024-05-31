@@ -18,14 +18,14 @@ function App() {
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Fovus - App Demo</span>
       </Navbar.Brand>
       <div className="flex md:order-2">
-        <Button color="blue" href="/SignIn" >Sign In</Button>
+        <Button color="blue" as={Link} to="/signin">Sign In</Button>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
         <Navbar.Link href="#" active>
           Home
         </Navbar.Link>
-        <Navbar.Link href="#">Sign In</Navbar.Link>
+        <Navbar.Link as={Link} to="/signin">Sign In</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
 
